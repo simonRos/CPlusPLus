@@ -17,36 +17,40 @@ int main()
 		{
 		case 4:
 			std::cout << "Please enter $ earned per item: $";
-			int cashPerI;
+			double cashPerI;
 			std::cin >> cashPerI;
 			std::cout << "Please enter # items produced: ";
-			int numItems;
+			double numItems;
 			std::cin >> numItems;
-			std::cout << "Employee has earned: $" << cashPerI*numItems;
+			std::cout << "Employee has earned: $" << cashPerI*numItems << std::endl;
 			break;
 		case 3:
-			std::cout << "Please enter $ per hour: $";
-			int cashPerH;
-			std::cin >> cashPerH;
-			std::cout << "Please enter # hours worked: ";
-			int numHours;
-			std::cin >> numHours;
-			std::cout << "Employee has earned: $" << cashPerH*numHours;
-			break;
-		case 2:
 			std::cout << "Please enter total value of sales: $";
-			int salesVal;
+			double salesVal;
 			std::cin >> salesVal;
 			std::cout << "At 5.7% commission and $250 base pay, employee has earned: $"
-				<< (salesVal*0.057) + 250;
+				<< (salesVal*0.057) + 250 << std::endl;
+			break;
+		case 2:
+			std::cout << "Please enter $ per hour: $";
+			double cashPerH;
+			std::cin >> cashPerH;
+			std::cout << "Please enter # hours worked: ";
+			double numHours;
+			std::cin >> numHours;
+			std::cout << "Employee has earned: $" << cashPerH*numHours << std::endl;
 			break;
 		case 1:
 			std::cout << "Please enter weekly salary: $";
+			double weekly;
+			std::cin >> weekly;
+			std::cout << "Employee has earned: $" << weekly << std::endl;
 			break;
 		case 0:
 			done = true;
 			break;
 		default:
+			std::cout << "Invalid entry" << std::endl;
 		}
 	}
 }
