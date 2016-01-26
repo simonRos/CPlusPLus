@@ -15,7 +15,7 @@ int main()
 		std::cin >> code;
 		switch (code)
 		{
-		case 4:
+		case 4: //Pieceworker
 			std::cout << "Please enter $ earned per item: $";
 			double cashPerI;
 			std::cin >> cashPerI;
@@ -24,14 +24,14 @@ int main()
 			std::cin >> numItems;
 			std::cout << "Employee has earned: $" << cashPerI*numItems << std::endl;
 			break;
-		case 3:
+		case 3: //Commission
 			std::cout << "Please enter total value of sales: $";
 			double salesVal;
 			std::cin >> salesVal;
 			std::cout << "At 5.7% commission and $250 base pay, employee has earned: $"
 				<< (salesVal*0.057) + 250 << std::endl;
 			break;
-		case 2:
+		case 2: //Hourly
 			std::cout << "Please enter $ per hour: $";
 			double cashPerH;
 			std::cin >> cashPerH;
@@ -40,17 +40,17 @@ int main()
 			std::cin >> numHours;
 			std::cout << "Employee has earned: $" << cashPerH*numHours << std::endl;
 			break;
-		case 1:
+		case 1: //Manager(salaried)
 			std::cout << "Please enter weekly salary: $";
 			double weekly;
 			std::cin >> weekly;
 			std::cout << "Employee has earned: $" << weekly << std::endl;
 			break;
-		case 0:
+		case 0: //end loop
 			done = true;
 			break;
 		default:
-			std::cout << "Invalid entry" << std::endl;
+			std::cout << "Invalid entry" << std::endl; //error message
 		}
 	}
 }
