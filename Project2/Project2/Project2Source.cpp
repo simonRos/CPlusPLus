@@ -1,7 +1,16 @@
-#include<iostream> //needed for io
+//Simon Rosner
+//2/2/2016
+//This program calculated weekly pay for emplyees based on their pay criteria.
 
+#include<iostream> //needed for io
+	
 int main()
 {
+	#define COMMISHBASE 250 //commission base pay
+	#define COMMISHRATE 0.057 //commission rate
+	#define OVERTIMERATE 1.5 //overtime rate
+	#define WORKABLEHOURS 40 //total hours that can be worked without overtime
+	
 	bool done = false; //loop control variable
 	while (!done)
 	{
@@ -28,8 +37,10 @@ int main()
 			std::cout << "Please enter total value of sales: $";
 			double salesVal;
 			std::cin >> salesVal;
-			std::cout << "At 5.7% commission and $250 base pay, employee has earned: $"
-				<< (salesVal*0.057) + 250 << std::endl;
+			std::cout << "At "<< COMMISHRATE
+			    <<" commission and "<< COMMISHBASE
+			    <<" base pay, employee has earned: $"
+				<< (salesVal*COMMISHRATE) + COMMISHBASE << std::endl;
 			break;
 		case 2: //Hourly
 			std::cout << "Please enter $ per hour: $";
@@ -38,7 +49,14 @@ int main()
 			std::cout << "Please enter # hours worked: ";
 			double numHours;
 			std::cin >> numHours;
-			std::cout << "Employee has earned: $" << cashPerH*numHours << std::endl;
+			double totalPayHourly;
+			if(numHours > WORKABLEHOURS){
+			    totalPayHourly = ((numHours-WORKABLEHOURS)*(OVERTIMERATE*cashPerH))+(WORKABLEHOURS*cashPerH);
+			}
+			else{
+			    totalPayHourly = numHours*cashPerH;
+			}
+			std::cout << "Employee has earned: $" << totalPayHourly << std::endl;
 			break;
 		case 1: //Manager(salaried)
 			std::cout << "Please enter weekly salary: $";
