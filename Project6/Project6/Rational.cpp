@@ -47,17 +47,17 @@ void Rational::set(int n, int d) {	//set rational
 	numer = n;
 	denom = d;
 	if (denom <= 0) {	//denom cannot be 0 or negative
-		cout << "Invalid denominator: " << d << "Defaulting to: " << DENOM_DEFAULT;
-		denom = DENOM_DEFAULT;
+		denom *= -1;
+		numer *= -1;
 	}
 	reduce();
 }
-void Rational::reciprocal() {	//convert Rational to its reciprocal
-	set(denom, numer);
-	if (denom <= 1) {
-		denom *= -1;
-		reduce();
-	}
+//void Rational::reciprocal() {	//convert Rational to its reciprocal
+//	set(denom, numer);
+//}
+Rational Rational::reciprocal(Rational x) {	//returns reciprocal
+	Rational y(x.denom, x.numer);
+	return y;
 }
 void Rational::negate() {	//flip the +/- sign on the Rational
 	numer *= -1;
@@ -78,13 +78,12 @@ void Rational::mult(Rational x) {	//Multiply...a.mult(b) or a=a*b
 	reduce();
 }
 void Rational::div(Rational x) {	//Divide
-	reciprocal();
-	mult(x);
+	mult(reciprocal(x));
 	reduce();
 }
 void Rational::print() {	//print Rational to console
 	cout << numer << '/' << denom;
 }
-void Rational::printFloat() {	//print Rational in float form to console
-	cout << float(numer/denom);
+double Rational::getFloat() {	//print Rational in float form to console
+	return double(numer / denom);
 }

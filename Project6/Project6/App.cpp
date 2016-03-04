@@ -1,3 +1,7 @@
+//Simon Rosner
+//3/2/2016
+//This application provides the user with an interactive demo of Rational.cpp
+
 #include"Rational.h"
 #include <iostream>
 
@@ -8,7 +12,7 @@ int main() {
 
 	cout << "Please enter a number from the list below "
 		<< "for the corresponding demo: " << endl
-		<< " 0 = Full Demo"
+		<< " 0 = Full Demo" << endl
 		<< " 1 = Addition" << endl
 		<< " 2 = Subtraction " << endl
 		<< " 3 = Multiplication " << endl
@@ -38,7 +42,6 @@ int main() {
 		a.add(b);
 		a.print();
 		cout << endl;
-		a.printFloat();
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 2: //Subtraction
@@ -46,7 +49,6 @@ int main() {
 		a.sub(b);
 		a.print();
 		cout << endl;
-		a.printFloat();
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 3:	//Multiplication
@@ -54,7 +56,6 @@ int main() {
 		a.mult(b);
 		a.print();
 		cout << endl;
-		a.printFloat();
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 4:	//Division
@@ -62,9 +63,8 @@ int main() {
 		a.div(b);
 		a.print();
 		cout << endl;
-		a.printFloat();
 		a = c;	//restore a
-		if (!demo) { break; }
+		break;
 	default:
 		cout << "Invalid entry" << endl; //error message
 	}
