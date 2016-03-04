@@ -18,13 +18,17 @@ Rational::Rational() {	//default constructor
 Rational::Rational(int n, int d) {	//additional constructor
 	set(n, d);
 }
+Rational::Rational(int n) {
+	numer = n;
+	denom = DENOM_DEFAULT;
+}
 //helper methods
 int Rational::gcd(int x, int y) {	//greatest common divisor
-	if (y == 0) {	//base case...if last x % y = 0
-		return x;
-	}
-	else {
+	if (y != 0) {	//base case...if last x % y != 0
 		return gcd(y, x % y);
+	}
+	else {	//last x % y == 0
+		return x;
 	}
 }
 void Rational::reduce() {	//reduce fraction to simplest form
@@ -50,29 +54,37 @@ void Rational::set(int n, int d) {	//set rational
 }
 void Rational::reciprocal() {	//convert Rational to its reciprocal
 	set(denom, numer);
+	if (denom <= 1) {
+		denom *= -1;
+		reduce();
+	}
 }
 void Rational::negate() {	//flip the +/- sign on the Rational
-	numer *= 1;
+	numer *= -1;
 }
-void Rational::add(Rational x) {	//double check this one
-	numer = (numer*x.denom) + (x.numer*denom);
+void Rational::add(Rational x) {	//Add
+	numer = (numer * x.denom) + (x.numer * denom);
 	denom *= x.denom;
 	reduce();
 }
-void Rational::sub(Rational x) {
-
+void Rational::sub(Rational x) {	//Subtract
+	numer = (numer * x.getDenom()) - (x.getNumer() * denom);
+	denom *= x.getDenom();
+	reduce();
 }
 void Rational::mult(Rational x) {	//Multiply...a.mult(b) or a=a*b
 	numer *= x.numer;
 	denom *= x.denom;
 	reduce();
 }
-void Rational::div(Rational x) {
-
+void Rational::div(Rational x) {	//Divide
+	reciprocal();
+	mult(x);
+	reduce();
 }
-void Rational::print() {
+void Rational::print() {	//print Rational to console
 	cout << numer << '/' << denom;
 }
-void Rational::printFloat() {
-
+void Rational::printFloat() {	//print Rational in float form to console
+	cout << float(numer/denom);
 }
