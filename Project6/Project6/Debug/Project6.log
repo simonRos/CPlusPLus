@@ -1,29 +1,5 @@
 ﻿  Rational.cpp
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(2): error C2008: '.': unexpected in macro definition
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(21): error C2208: 'Rational': no members defined using this type
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(3): error C2143: syntax error: missing ';' before 'using namespace'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(5): error C2511: 'Rational::Rational(void)': overloaded member function not found in 'Rational'
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(4): note: see declaration of 'Rational'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(6): error C2597: illegal reference to non-static member 'Rational::numer'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(7): error C2597: illegal reference to non-static member 'Rational::denom'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(16): error C2556: 'int Rational::add(Rational)': overloaded function differs only by return type from 'void Rational::add(Rational)'
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(14): note: see declaration of 'Rational::add'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(16): error C2371: 'Rational::add': redefinition; different basic types
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(14): note: see declaration of 'Rational::add'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(18): error C2146: syntax error: missing ';' before identifier 'denom'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(19): error C2143: syntax error: missing ';' before '}'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(21): error C2556: 'int Rational::mult(Rational)': overloaded function differs only by return type from 'void Rational::mult(Rational)'
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(16): note: see declaration of 'Rational::mult'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(21): error C2371: 'Rational::mult': redefinition; different basic types
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(16): note: see declaration of 'Rational::mult'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(23): error C2146: syntax error: missing ';' before identifier 'denom'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(24): error C2146: syntax error: missing ';' before identifier 'reduce'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(27): error C2556: 'int Rational::print(void)': overloaded function differs only by return type from 'void Rational::print(void)'
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(18): note: see declaration of 'Rational::print'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(27): error C2371: 'Rational::print': redefinition; different basic types
-  c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.h(18): note: see declaration of 'Rational::print'
-c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp(28): error C2065: 'cout': undeclared identifier
+  App.cpp
+  Generating Code...
+  Project6.vcxproj -> C:\Users\Simon\Google Drive\SchoolStuff\Junior\C++\CPlusPLus\Project6\Debug\Project6.exe
+  Project6.vcxproj -> C:\Users\Simon\Google Drive\SchoolStuff\Junior\C++\CPlusPLus\Project6\Debug\Project6.pdb (Partial PDB)
