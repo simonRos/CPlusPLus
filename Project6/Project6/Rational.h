@@ -17,8 +17,6 @@ private:
 	int getNumer();	//As far as i can tell they are the same as
 					//x.numer
 					//x.denom
-	//void reciprocal();
-	void negate();	//negates the Rational
 
 public:
 	//Constructor
@@ -26,6 +24,7 @@ public:
 	Rational(int, int);	//full
 	Rational(int);	//numerator only
 	//functions
+	void negate();	//negates the Rational
 	void set(int, int);	//set
 	void add(Rational);	//a.add(b) or a=a+b
 	void sub(Rational);	//subtract

@@ -47,8 +47,8 @@ void Rational::set(int n, int d) {	//set rational
 	numer = n;
 	denom = d;
 	if (denom <= 0) {	//denom cannot be 0 or negative
-		denom *= -1;
-		numer *= -1;
+		denom = -denom;
+		numer = -numer;
 	}
 	reduce();
 }
@@ -60,7 +60,7 @@ Rational Rational::reciprocal(Rational x) {	//returns reciprocal
 	return y;
 }
 void Rational::negate() {	//flip the +/- sign on the Rational
-	numer *= -1;
+	numer = -numer;
 }
 void Rational::add(Rational x) {	//Add
 	numer = (numer * x.denom) + (x.numer * denom);
@@ -68,8 +68,8 @@ void Rational::add(Rational x) {	//Add
 	reduce();
 }
 void Rational::sub(Rational x) {	//Subtract
-	numer = (numer * x.getDenom()) - (x.getNumer() * denom);
-	denom *= x.getDenom();
+	negate();
+	add(x);
 	reduce();
 }
 void Rational::mult(Rational x) {	//Multiply...a.mult(b) or a=a*b

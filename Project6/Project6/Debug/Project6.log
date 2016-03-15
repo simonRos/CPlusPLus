@@ -1,6 +1,4 @@
 ﻿  Rational.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project6\project6\rational.cpp : fatal error C1041: cannot open program database 'C:\Users\Simon\Google Drive\SchoolStuff\Junior\C++\CPlusPLus\Project6\Project6\Debug\vc140.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
   App.cpp
-  Project6.vcxproj -> C:\Users\Simon\Google Drive\SchoolStuff\Junior\C++\CPlusPLus\Project6\Debug\Project6.exe
-  Project6.vcxproj -> C:\Users\Simon\Google Drive\SchoolStuff\Junior\C++\CPlusPLus\Project6\Debug\Project6.pdb (Partial PDB)
+  Generating Code...

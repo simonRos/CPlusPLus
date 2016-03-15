@@ -38,6 +38,7 @@ int main() {
 	case 0: //Demo
 		demo = true;
 	case 1:	//Addition
+		cout << "Addition" << endl;
 		c = a; //save a's value
 		a.add(b);
 		a.print();
@@ -45,6 +46,7 @@ int main() {
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 2: //Subtraction
+		cout << "Subtraction" << endl;
 		c = a; //save a's value
 		a.sub(b);
 		a.print();
@@ -52,6 +54,7 @@ int main() {
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 3:	//Multiplication
+		cout << "Multiplication" << endl;
 		c = a; //save a's value
 		a.mult(b);
 		a.print();
@@ -59,6 +62,7 @@ int main() {
 		a = c;	//restore a
 		if (!demo) { break; }
 	case 4:	//Division
+		cout << "Division" << endl;
 		c = a; //save a's value
 		a.div(b);
 		a.print();
