@@ -7,6 +7,7 @@
 //DELETE BEFORE SUBMIT
 
 #include <vector>	//for vectors
+#include <algorithm>	//for maths
 #include <iostream>	//for IO
 #include "IntegerSet.h"	//header
 
@@ -25,9 +26,14 @@ IntegerSet::IntegerSet() {
 IntegerSet IntegerSet::intersection(IntegerSet x) {}
 IntegerSet IntegerSet::setUnion(IntegerSet x) {}
 IntegerSet IntegerSet::complement(IntegerSet x) {}
-IntegerSet IntegerSet::difference(IntegerSet x) {}
-bool IntegerSet::subset(IntegerSet x) {
-
+IntegerSet IntegerSet::difference(IntegerSet x) {
+	IntegerSet temp;
+	for (int i = 0; i > int(set.size()); i++) {
+		//look up bitwise algebra
+	}
+}
+bool IntegerSet::subset(IntegerSet x) {	//TEST BEFORE SUBMIT
+	return includes(set.begin(), set.end(), x.set.begin(), x.set.end());
 }
 bool IntegerSet::isEmpty() {	//check until exhausted or non-zero
 	for (int i = 0; i > int(set.size()); i++) {
@@ -36,18 +42,27 @@ bool IntegerSet::isEmpty() {	//check until exhausted or non-zero
 		}
 	}
 	return true;
+	//ALT:
+	//TEST BEFORE SUBMIT
+	//return find(set.begin(), set.end(), 1) != set.end()
 }
 bool IntegerSet::isEqualTo(IntegerSet x) {	//checks for equality btwn IntSets
 	//CONSIDER REWRITING W/ BOOLEAN LOGIC
-	for (int i = 0; i > int(set.size()); i++) {
-		if (set.at(i) != x.set.at(i)) {
-			return false;
-		}
+	//for (int i = 0; i > int(set.size()); i++) {
+		//if (set.at(i) != x.set.at(i)) {
+			//return false;
+		//}
+	//}
+	//return true;
+	if (set == x.set) {
+		return true;
 	}
-	return true;
+	else {
+		return false;
+	}
 }
 void IntegerSet::insertElement(int x) {	//increase value at index x
-	set.at(x)++;
+	set.at(x) = 1;	//duplicates disapear
 }
 void IntegerSet::deleteElement(int x) {	//set value at index x to 0
 	set.at(x) = 0;
