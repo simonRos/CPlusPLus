@@ -1,0 +1,6 @@
+﻿  IntegerSet.cpp
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project7intsets\project7intsets\integerset.cpp(21): error C4716: 'IntegerSet::intersection': must return a value
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project7intsets\project7intsets\integerset.cpp(22): error C4716: 'IntegerSet::setUnion': must return a value
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project7intsets\project7intsets\integerset.cpp(23): error C4716: 'IntegerSet::complement': must return a value
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project7intsets\project7intsets\integerset.cpp(24): error C4716: 'IntegerSet::difference': must return a value
+c:\users\simon\google drive\schoolstuff\junior\c++\cplusplus\project7intsets\project7intsets\integerset.cpp(25): error C4716: 'IntegerSet::subset': must return a value
