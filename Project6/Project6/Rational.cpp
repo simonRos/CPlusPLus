@@ -85,5 +85,5 @@ void Rational::print() {	//print Rational to console
 	cout << numer << '/' << denom;
 }
 double Rational::getFloat() {	//print Rational in float form to console
-	return double(numer / denom);
+	return double(double(numer) / (denom));
 }
