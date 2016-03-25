@@ -113,6 +113,7 @@
     <ClInclude Include="IntegerSet.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="App.cpp" />
     <ClCompile Include="IntegerSet.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

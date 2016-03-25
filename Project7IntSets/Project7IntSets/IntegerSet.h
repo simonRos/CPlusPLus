@@ -7,15 +7,17 @@
 using namespace std;
 
 class IntegerSet {
-//named constants
+	//named constants
 private:
 	//vars
 
 	//functions
 
 public:
+	//Named Constants
+	#define SETMAX 100;	//Max int allowed in set
 	//vars
-	vector <int> set;	//Storage for set.
+	vector<int> set;	//Storage for set.
 	//constructor(s)
 	IntegerSet();	//default
 	//functions
@@ -23,6 +25,7 @@ public:
 	IntegerSet setUnion(IntegerSet);
 	IntegerSet complement(IntegerSet);
 	IntegerSet difference(IntegerSet);
+	int at(int);
 	bool subset(IntegerSet);
 	bool isEmpty();
 	bool isEqualTo(IntegerSet);

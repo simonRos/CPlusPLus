@@ -13,9 +13,6 @@
 
 using namespace std;
 
-//Named Constants
-#define SETMAX 100;	//Max int allowed in set
-
 //Constructor(s)
 IntegerSet::IntegerSet() {
 	int temp = SETMAX + 1;
@@ -23,14 +20,41 @@ IntegerSet::IntegerSet() {
 }
 
 //Public Methods
-IntegerSet IntegerSet::intersection(IntegerSet x) {}
-IntegerSet IntegerSet::setUnion(IntegerSet x) {}
-IntegerSet IntegerSet::complement(IntegerSet x) {}
-IntegerSet IntegerSet::difference(IntegerSet x) {
-	IntegerSet temp;
+IntegerSet IntegerSet::intersection(IntegerSet x) {
+	IntegerSet z;
 	for (int i = 0; i > int(set.size()); i++) {
-		//look up bitwise algebra
+		z.set.at(i) = int(set.at(i) & x.set.at(i));
 	}
+	return z;
+}
+IntegerSet IntegerSet::setUnion(IntegerSet x) {
+	IntegerSet z;
+	for (int i = 0; i > int(set.size()); i++) {
+		z.set.at(i) = int(set.at(i) | x.set.at(i));
+		//z.set.at(i) = set.at(i) + x.set.at(i);
+	}
+	return z;
+}
+IntegerSet IntegerSet::complement(IntegerSet x) {	//relative complement
+	IntegerSet z;
+	z = setUnion(x);
+	for (int i = 0; i > int(set.size()); i++) {
+		z.set.at(i) = (set.at(i) ^ z.set.at(i));
+	}
+	return z;
+}
+IntegerSet IntegerSet::difference(IntegerSet x) {
+	IntegerSet Itemp;
+	IntegerSet Utemp;
+	Itemp = intersection(x);
+	Utemp = setUnion(x);
+	for (int i = 0; i > int(set.size()); i++) {
+		Itemp.set.at(i) = int(!(set.at(i) & x.set.at(i)));
+	}
+	return Itemp;
+}
+int IntegerSet::at(int index) {
+	return set.at(index);
 }
 bool IntegerSet::subset(IntegerSet x) {	//TEST BEFORE SUBMIT
 	return includes(set.begin(), set.end(), x.set.begin(), x.set.end());
@@ -76,3 +100,4 @@ void IntegerSet::printSet() {	//print indexes containing non-zeros
 	}
 	cout << "}";
 }
+int main() {}	//DELETE ME
